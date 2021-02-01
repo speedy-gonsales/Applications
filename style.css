@@ -1,0 +1,110 @@
+/* First navigation bar - gray backgroung all wide  */
+.navbar {
+  overflow: hidden;
+  background-color: gray; 
+  height: 20px;
+  width: 110%;
+  margin: -8px;
+  margin-top: 80px;
+}
+
+/* Nav buttons on the first navigation bar */
+.navbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0px 16px;
+  background: inherit;
+  font-family: inherit;
+}
+
+/* Blue background color to navigation links on hover */
+button:hover, button:focus-within{
+  background: blue;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav, .subnav-vc {
+  display: none;
+  position: absolute;
+  left: 0px;
+  background: lightgray;
+  width: 100%;
+  z-index: 1;
+}
+
+/*Alternar cores em subnav-vc*/
+.subnav-vc a:nth-child(odd) {
+  background:deepskyblue;
+  border-left-color: deepskyblue;
+}
+.subnav-vc a:nth-child(even) {
+  background: lightblue;
+  border-left-color: lightblue;
+}
+
+/* Red in subnav hover */
+.subnav a:hover, .subnav-vc a:hover, 
+.subnav a:focus, .subnav-vc a:focus, 
+.subnav a:focus-within, .subnav-vc a:focus-within{
+  background: darkviolet;
+  border-left-color: darkviolet;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style the subnav links */
+.subnav a, .subnav-vc a {
+  float: left;
+  width: auto;
+  color: black;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 0px 16px;
+}
+
+.subnav-vc a {
+  padding: 0px 0px 0px 10px;
+  border-left-color: yellow; /*rgba(84,161,230);*/
+}
+
+button:hover > nav,
+button:focus-within > nav,
+button nav:hover,
+button nav:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+/* chevron */
+.subnav-vc a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-left-color: inherit;
+  z-index: 1;
+}
+
+.subnav-vc a:last-child {
+  border-left-color: transparent;
+}
+
+/*
+preprocessadores
+SASS (.scss)
+ LESS
+ MVC
+ Design Paterns
+ DAO
+ Repository
+ */
